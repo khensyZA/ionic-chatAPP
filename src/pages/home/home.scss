@@ -1,3 +1,211 @@
 page-home {
 
+  .main{
+    background-color: #87AC38; 
+    
+    
 }
+
+.main2{
+   background-color:rgb(173, 201, 113);
+}
+
+.item{
+   padding-top: 10px;
+   background-color:transparent;
+}
+
+ion-input{
+   font-size: 16px;
+   color:black;
+}
+    ion-content {
+      background-color: #87AC38;
+    //   background-size: cover;
+    //   height: 100%;
+    //   overflow: hidden;
+    //   .item-md, .item-ios {
+    //     background: none;
+    //   }
+    }
+    ion-footer {
+    
+      ion-icon {
+        border-radius: 0;
+        margin: 0;
+        position:absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+  
+         padding: 12px;
+        font-size: 30px;
+        color: green;
+      }
+
+      ion-item{
+        // background: transparent;
+        position: relative;
+        min-width: 50px;
+        padding: 5px;
+        
+        border-top-left-radius: 10em;
+        border-top-right-radius: 10em;
+        border-bottom-left-radius: 12em;
+       border-bottom-right-radius: 12em;
+      }
+
+      ion-input {
+        position: relative;
+        width: 90%;
+        
+        // border: none;
+        padding-block-end: 5px 10px;
+        font-size: 14px;
+        // color: pink;
+        font-weight: bold;
+        font-family: 'Titillium Web', sans-serif;
+        // background: inherit;
+     
+      }
+
+
+      ion-toolbar {
+      
+        margin: 0;
+        padding: 0!important;
+       background:lightgrey;
+      }
+    }
+
+
+    .chat-status {
+      min-height: 49px;
+      font-size: 10px;
+      padding: 2px;
+      .chat-date {
+        display: block;
+        font-size: 10px;
+        color:black;
+        text-shadow: 0px -1px 0px rgb(36, 36, 36), 0px 1px 0px #aaa;
+        height: 16px;
+        left: 10%;
+        right:10%;
+      }
+      .chat-content-center {
+        padding: 5px ;
+        background-color: rgba(17, 8, 8, 0.178);
+        border-radius: 11px;
+        font-size: 10px;
+        color: rgb(24, 24, 24);
+        height: 34px;
+        left: 10%;
+        right:10%;
+      }
+    }
+    .chat-message {
+       width: 80%;
+     min-height: 50px;
+       font-size: 8px;
+  
+      .right-bubble {
+          position:relative;
+          background: #a19e9e;
+         border-top-left-radius: 8em;
+         border-top-right-radius: -2em;
+         border-bottom-left-radius: 8em;
+        border-bottom-right-radius: 8em;
+         padding:8px;
+         left: 22%;
+        color:black;
+        font-size: 12px;
+
+        span.msg-name {
+          font-size: 12px;
+          font-weight: bold;
+          color: green;
+        }
+        span.msg-date {
+           
+          font-size: 10px;
+            color:green;
+            height: 16px;
+            // left: 10%;
+            // right:10%;
+        
+      
+          }
+      }
+      .right-bubble:after {
+          content: '';
+          position: absolute;
+          right: 0;
+          top: 0;
+          width: 0;
+          height: 0;
+          border: 22px solid transparent;
+          border-left-color: #2f642f;
+          border-right: 0;
+          border-top: 0;
+          margin-top: -13px;
+          margin-right: -20px;
+      }
+
+
+     
+      .left-bubble {
+          position: relative;
+          background: #e1e1eb;
+          border-top-left-radius: 1em;
+          border-top-right-radius: 8em;
+          border-bottom-left-radius: 8em;
+         border-bottom-right-radius: 8em;
+         padding:8px;
+        left:5%;
+        color:black;
+        font-size: 10px;
+
+         span.msg-name {
+          font-size: 12px;
+          font-weight: bold;
+          color: green;
+        }
+        span.msg-date {
+          font-size: 10px;
+            color:green;
+            height: 16px;
+        }
+      }
+    
+      .left-bubble:after {
+          content: '';
+          position: absolute;
+          left: 0;
+          top: 0;
+          width: 0;
+          height: 0;
+          border: 22px solid transparent;
+          border-right-color: #2f642f;
+          border-left: 0;
+          border-top: 0;
+          margin-top: -13px;
+          margin-left: -22px;
+      }
+
+
+    }
+
+    .footer{
+      background-color:87AC38;
+    }
+
+    #foot{
+      background-color:  rgba(17, 8, 8, 0.178);
+      border-radius: 22em;
+    //   border-top-left-radius: 10em;
+    //   border-top-right-radius: 10em;
+    //   border-bottom-left-radius: 12em;
+    //  border-bottom-right-radius: 12em;
+    }
+  }

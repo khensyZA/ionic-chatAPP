@@ -1,14 +1,79 @@
 <ion-header>
-  <ion-navbar>
-    <ion-title>
-      Ionic Blank
-    </ion-title>
+  <ion-navbar color="green">
+    <ion-title >
+     Welcome {{userProfile?.firstname}} 
+  </ion-title>
+  <ion-buttons end>
+      <button ion-button icon-only  color="dark" (click)="exitChat()" >
+      <ion-icon name="exit"></ion-icon>
+     </button>
+     <button ion-button icon-only color="dark" (click)="goToProfile()">
+     <ion-icon name="person"></ion-icon>
+     </button>
+     </ion-buttons>
   </ion-navbar>
+ 
 </ion-header>
 
-<ion-content padding>
-  The world is your oyster.
-  <p>
-    If you get lost, the <a href="http://ionicframework.com/docs/v2">docs</a> will be your guide.
-  </p>
+     <!-- <ion-content class="main2" padding>  -->
+    <ion-content class="main" no-padding>
+
+    <ion-list>
+        <ion-item class="item" *ngFor="let chat of chats" no-lines text-wrap>
+
+        <div class="chat-status" text-center *ngIf="chat.type==='join'|| chat.type==='exit';else message" text-wrap>
+        <span class="chat-date">{{chat.sendDate | date: 'short'}}</span>
+        <span class="chat-content-center">{{chat.message}}</span>
+        </div>
+
+        <ng-template #message>
+
+        <div class="chat-message" *ngIf="chat.user=== userProfile.firstname" >
+        <div class="right-bubble" text-wrap>
+        
+        <span class="msg-name">Me:</span>
+        <span>{{chat.message}}</span>
+        <br>
+        <span  class="msg-date">{{chat.sendDate | date:'HH:mm'}}</span>
+       
+        </div>
+        </div>
+        
+       
+        <div class="chat-message" text-left *ngIf="chat.user !== userProfile.firstname" text-wrap>
+        <div class="left-bubble">
+        <span class="msg-name"> {{chat.firstname}} </span>
+        <span>{{chat.message}}</span>
+        <br>
+        <span text-right class="msg-date">{{chat.sendDate | date:'HH:mm'}}</span>
+        </div>
+       </div>
+      </ng-template>
+
+      </ion-item>
+   </ion-list> 
 </ion-content>
+<!-- </ion-content>  -->
+
+
+<ion-footer >
+    <ion-grid>
+    <ion-row>
+    <ion-col col-10 id=foot >
+      <ion-item color="dark" >
+    <ion-input type="type"  placeholder="type a message" [(ngModel)]="data.message" name="message" ></ion-input >
+    </ion-item>
+   </ion-col>
+   <ion-col col-2  >
+  <ion-buttons end>
+   <button (click)="sendMessage()"><ion-icon name="send" ></ion-icon> 
+   </button> 
+  </ion-buttons>
+   </ion-col>
+    </ion-row>
+  </ion-grid>
+  
+</ion-footer>
+
+
+ 
